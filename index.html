@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f6efe5" />
+  <title>For You, From My Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23ed7395'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='44' fill='white'%3E✳%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Room Creator home"><span class="brand-mark">✳</span><span>room<span class="brand-pink">.creator</span></span></a>
+      <div class="top-stats">
+        <div class="stat-chip"><span class="chip-icon">◉</span><span id="followersTop">0</span><small>followers</small></div>
+        <div class="stat-chip money-chip"><span class="chip-icon">＄</span><span id="moneyTop">0</span><small>coins</small></div>
+        <div class="day-chip" id="dayLabel">DAY 01</div>
+      </div>
+      <button class="icon-button" id="soundButton" aria-label="Toggle sound" title="Toggle sound">♫</button>
+    </header>
+
+    <section class="game-grid">
+      <aside class="room-panel panel">
+        <div class="panel-kicker"><span class="live-dot"></span> YOUR CREATOR SPACE</div>
+        <div class="room-scene" id="roomScene">
+          <div class="room-window"><div class="window-sky"></div><div class="window-city"></div><div class="window-sill"></div></div>
+          <div class="room-poster poster-one">MAKE<br><span>GOOD</span><br>THINGS</div>
+          <div class="room-poster poster-two">✿</div>
+          <div class="room-shelf"><span>▰</span><span>♧</span><span>▰</span></div>
+          <div class="plant"><i></i><i></i><i></i><b></b></div>
+          <div class="desk">
+            <div class="desk-lamp"><i></i><b></b></div>
+            <div class="laptop"><div class="laptop-screen">✦</div><div class="laptop-base"></div></div>
+            <div class="desk-mug">☕</div>
+          </div>
+          <div class="chair"></div>
+          <div class="creator-avatar"><div class="avatar-hair"></div><div class="avatar-face">•ᴗ•</div><div class="avatar-body"></div></div>
+          <div class="room-overlay"></div>
+          <div class="room-caption"><span class="room-tag">HOME STUDIO</span><strong>Small room.<br><em>Big energy.</em></strong></div>
+          <div class="room-equipment" id="roomEquipment"></div>
+        </div>
+        <div class="room-footer"><span><i class="tiny-sparkle">✦</i> Your setup</span><button class="text-button" data-view="shop">UPGRADE ROOM <span>↗</span></button></div>
+        <div class="daily-card">
+          <div class="daily-icon">☀</div><div><strong id="dailyTitle">Today's vibe</strong><p id="dailyText">Make something that feels like you.</p></div><span class="daily-badge">TREND</span>
+        </div>
+      </aside>
+
+      <section class="phone-column">
+        <div class="phone-intro"><span class="eyebrow">YOUR LITTLE CORNER OF THE INTERNET</span><h1>Make a little<br><span>magic.</span></h1><p>One room, one phone, and an idea worth sharing.</p></div>
+        <div class="phone-wrap">
+          <div class="phone-hardware">
+            <div class="phone-side-button"></div><div class="phone-notch"><span></span></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span>▮▮▮　◉</span></div>
+              <div class="app-header"><div class="mini-brand"><span>✳</span> for you</div><div class="phone-avatar">☺</div></div>
+              <div id="phoneContent" class="phone-content"></div>
+              <nav class="phone-nav" aria-label="Game navigation">
+                <button class="nav-item active" data-view="studio"><span>⌂</span><small>Studio</small></button>
+                <button class="nav-item" data-view="feed"><span>♡</span><small>Feed</small></button>
+                <button class="create-nav" data-view="create" aria-label="Create video">＋</button>
+                <button class="nav-item" data-view="shop"><span>▣</span><small>Shop</small></button>
+                <button class="nav-item" data-view="profile"><span>♙</span><small>You</small></button>
+              </nav>
+            </div>
+          </div>
+          <div class="phone-shadow"></div>
+        </div>
+        <div class="phone-hint"><span>✦</span> Your next hit is one video away</div>
+      </section>
+
+      <aside class="right-panel">
+        <section class="panel progress-panel">
+          <div class="section-heading"><div><div class="panel-kicker">THE JOURNEY</div><h2>Creator stats</h2></div><span class="level-pill" id="levelPill">LVL 1</span></div>
+          <div class="xp-row"><span id="xpLabel">0 / 100 XP</span><span id="xpPercent">0%</span></div><div class="xp-track"><i id="xpBar"></i></div>
+          <div class="stat-grid"><div class="mini-stat"><span>♥</span><strong id="followerCount">0</strong><small>followers</small></div><div class="mini-stat"><span>◉</span><strong id="viewsCount">0</strong><small>total views</small></div><div class="mini-stat"><span>▤</span><strong id="videoCount">0</strong><small>videos posted</small></div></div>
+          <div class="next-goal"><span class="goal-icon">✧</span><div><small>NEXT MILESTONE</small><strong id="goalText">Reach 100 followers</strong></div><span class="goal-arrow">→</span></div>
+        </section>
+        <section class="panel trend-panel">
+          <div class="trend-heading"><div class="trend-icon">↗</div><div><div class="panel-kicker">TRENDING NOW</div><h2 id="trendName">#CozyCore</h2></div><span class="trend-hot">HOT</span></div>
+          <p id="trendDescription">Show us your favorite little corner.</p>
+          <div class="trend-meter"><div><span>Trend window</span><b id="trendTimer">2 posts left</b></div><div class="trend-track"><i id="trendBar"></i></div></div>
+        </section>
+        <section class="panel tip-panel"><div class="tip-star">✦</div><div><div class="panel-kicker">CREATOR TIP</div><p id="tipText">A clear idea beats fancy gear. Tell a tiny story.</p></div><button id="tipNext" class="tip-next" aria-label="Next tip">↗</button></section>
+        <div class="save-note"><span>●</span> Progress saves automatically</div>
+      </aside>
+    </section>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="modalRoot"></div>
+    <footer class="footer"><span>✳ room.creator</span><span>Make it yours, make it often.</span><button id="resetButton">RESET GAME</button></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
